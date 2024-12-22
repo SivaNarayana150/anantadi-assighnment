@@ -1,0 +1,91 @@
+//creating a usert
+POST http://localhost:3001/users/
+Content-Type: application/json
+
+{
+    "username": "RathanSai",
+    "password": "Rathan123@#$"
+}
+
+###
+
+//get video by id 
+GET http://localhost:3001/videos/1
+###
+
+
+
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+    "username": "RathanSai",
+    "password": "Rathan123@#$"
+}
+
+
+
+### 
+
+GET http://localhost:3001/videos?title=Nature
+### 
+
+GET http://localhost:3001/videos?tags=wildlife
+### 
+
+GET http://localhost:3001/videos?description=wildlife
+###
+
+GET http://localhost:3001/videos?title=Nature&tags=wildlife
+###
+
+GET http://localhost:3001/videos?tags=wildlife&description=wildlife
+### 
+
+GET http://localhost:3001/videos?title=Nature&tags=wildlife&description=wildlife
+### 
+
+GET http://localhost:3001/videos
+### 
+
+POST http://localhost:3001/videos
+Content-Type: application/json
+
+{
+    "title": "Nature Documentary",
+    "description": "A fascinating documentary about wildlife and nature.",
+    "tags": "nature, wildlife, documentary",
+    "duration": 3600,
+    "file_size": 1500000000,
+    "uploaded_at": "2024-12-22 04:37:41",
+    "video_link": "https://www.youtube.com/watch?v=QwZT7T-TXP0"
+}
+
+
+
+###
+
+
+PUT http://localhost:3001/videos/1
+Content-Type: application/json
+
+{
+    "title": "Updated Nature Documentary",
+    "description": "An updated version of the wildlife and nature documentary.",
+    "tags": "nature, wildlife, updated documentary",
+    "duration": 4000,
+    "file_size": 1600000000,
+    "uploaded_at": "2024-12-22 05:00:00",
+    "video_link": "https://www.youtube.com/watch?v=UpdatedLink"
+}
+
+
+### DELETE Video by ID
+DELETE http://localhost:3001/videos/:id
+Content-Type: application/json
+
+{
+  "id": "1"
+}
+
+

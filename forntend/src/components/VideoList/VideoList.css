@@ -1,0 +1,99 @@
+.video-list {
+  margin: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.video-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.video-card {
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding: 20px;
+  border-radius: 12px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #333;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.video-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #444;
+  font-weight: bold;
+}
+
+.video-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.video-link {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.video-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Styling for the delete button */
+.delete-button {
+  background-color: transparent;
+  border: none;
+  color: #dc3545; /* Red color for delete button */
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-top: 10px;
+  align-self: flex-start; /* Aligns the button to the left */
+}
+
+.delete-button:hover {
+  color: #c82333; /* Darker red on hover */
+}
+
+.upload-button {
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.upload-button:hover {
+  background-color: #218838;
+}

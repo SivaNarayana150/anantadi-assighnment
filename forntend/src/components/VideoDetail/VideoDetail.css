@@ -1,0 +1,80 @@
+.video-detail {
+  padding: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Georgia', serif;
+  color: #333;
+}
+
+.video-detail h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.video-detail p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  line-height: 1.8;
+  margin: 8px 0;
+  text-align: justify;
+}
+
+.video-detail p strong {
+  color: #34495e;
+  font-weight: bold;
+}
+
+.video-thumbnail {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.watch-button {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #2980b9;
+  border: 1px solid #2980b9;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.watch-button:hover {
+  background-color: #1abc9c;
+  transform: scale(1.05);
+}
+
+.video-detail iframe {
+  display: block;
+  margin-top: 25px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .video-detail {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .video-detail h2 {
+    font-size: 2rem;
+  }
+
+  .video-detail p {
+    font-size: 1rem;
+  }
+
+  .watch-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
