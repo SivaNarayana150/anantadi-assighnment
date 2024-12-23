@@ -37,7 +37,6 @@ const initializeDatabaseServer = async () => {
 
 initializeDatabaseServer();
 
-// Route to create a new user
 app.post('/users', async (req, res) => {
   const { username, password } = req.body;
   const hashedPassword = await bcrypt.hash(password, 10);
@@ -46,7 +45,7 @@ app.post('/users', async (req, res) => {
   const dbUser = await db.get(selectUserQuery, [username]);
 
   if (dbUser) {
-    return res.status(400).send({ message: 'User already exists' });
+    return res.status(400).send({ error: 'User already exists' });
   }
 
   const createUserQuery = `INSERT INTO users (username, password) VALUES (?, ?)`;
@@ -55,7 +54,7 @@ app.post('/users', async (req, res) => {
     res.status(201).send({ success: true, id: result.lastID, username });
   } catch (e) {
     console.error(`Error creating user: ${e.message}`);
-    res.status(500).send({ message: 'Internal Server Error' });
+    res.status(500).send({ error: 'Internal Server Error' });
   }
 });
 

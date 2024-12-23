@@ -16,12 +16,13 @@ const Signup = () => {
         username,
         password,
       });
-      if (response.status === 200) {
+      if (response.status === 201) {
         alert("Signup successful");
         navigate("/login"); // Navigate to login page after successful signup
       }
     } catch (err) {
-      setError("Signup failed: " + err.response.data);
+      console.error(err); // Log the error to check its structure
+      setError("Signup failed: " + (err.response?.data?.error || 'Unknown error'));
     }
   };
 
